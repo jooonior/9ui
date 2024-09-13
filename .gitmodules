@@ -1,0 +1,3 @@
+[submodule "deps/keyvalues"]
+	path = deps/keyvalues
+	url = https://github.com/jooonior/keyvalues.git

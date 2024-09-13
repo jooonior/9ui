@@ -1,0 +1,35 @@
+<!-- RemixIcon licensed under https://creativecommons.org/licenses/by/4.0/ -->
+
+<svg
+  version="1.1"
+  width="1000"
+  height="1000"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="m 50,50
+       h 900
+       a 50,50 0 0 1 50,50
+       v 800
+       a 50,50 0 0 1 -50,50
+       H 50
+       A 50,50 0 0 1 0,900
+       V 100
+       A 50,50 0 0 1 50,50
+       Z
+
+       M 500,650
+       V 750
+       H 800
+       V 650
+       Z
+
+       M 320.7,500
+       L 179.3,641.4
+       L 250,712.15
+       L 462.15,500
+       L 250,287.85
+       l -70.7,70.75
+       Z"
+  />
+</svg>

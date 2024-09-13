@@ -1,0 +1,6 @@
+/addons/**/*.dll
+
+/addons/**/*.so
+/addons/**/lib*.*.so.*
+
+/sound/sound.cache

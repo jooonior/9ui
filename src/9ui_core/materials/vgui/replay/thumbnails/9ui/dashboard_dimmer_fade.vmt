@@ -1,0 +1,7 @@
+// This material imitates the opacity of `DashboardDimmer` during its fade animation.
+UnlitGeneric
+{
+  $basetexture "vgui/replay/thumbnails/9ui/dashboard_dimmer_fade"
+  $translucent 1
+  $color "[0 0 0]"
+}

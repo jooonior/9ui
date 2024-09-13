@@ -1,0 +1,4 @@
+exec valve.rc.stock
+
+// Set `ExpandableList` slide time to match `DashboardDimmer` alpha animation.
+tf_dashboard_slide_time 0.4
