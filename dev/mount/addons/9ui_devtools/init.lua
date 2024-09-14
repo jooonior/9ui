@@ -2,15 +2,17 @@ local ffi = require "ffi"
 
 require "9ui_devtools.globals"
 
-local glob = require "9ui_devtools.utils.glob"
+local engine = require "9ui_devtools.engine"
 local ifc = require "9ui_devtools.interfaces"
-
+local plugin = require "9ui_devtools.plugin"
+local utils = require "9ui_devtools.utils"
 
 
 -- Plugin table.
 
 local Plugin = {
   mounted = {},
+  commands = {},
 }
 
 
@@ -26,7 +28,7 @@ function Plugin:Load(interface_factory)
 
   local directories_to_mount = {}
 
-  for filename in glob(build_directory .. "*") do
+  for filename in utils.glob(build_directory .. "*") do
     if filename:match("[\\/]$") then
       local directory = (build_directory .. filename):gsub("\\", "/")
       table.insert(directories_to_mount, directory)
@@ -43,6 +45,41 @@ function Plugin:Load(interface_factory)
     print(("[9ui_devtools] mount: %s"):format(path))
   end
 
+  if ifc.cvar ~= nil then
+
+    if ifc.panel ~= nil and ifc.surface ~= nil then
+
+      local command = engine.ConCommand {
+        name = "vpanel_dump_settings",
+        description = "Print VGUI panel settings to console.",
+        callback = function(args)
+          if args:ArgC() < 2 then
+            warn("usage: vpanel_dump_settings <panel name> ...")
+            return
+          end
+
+          local names = {}
+          for i = 1, args:ArgC() - 1 do
+            table.insert(names, args:Arg(i))
+          end
+
+          local panel = plugin.vpanel.find_panel(unpack(names))
+          if panel == nil then
+            print("panel not found")
+          else
+            plugin.vpanel.print_panel_settings(panel)
+          end
+        end,
+      }
+      if command ~= nil then
+        ifc.cvar:RegisterConCommand(command)
+        table.insert(self.commands, command)
+      end
+
+    end
+
+  end
+
   return true
 end
 
@@ -51,6 +88,10 @@ function Plugin:Unload()
   for _, mounted in ipairs(self.mounted) do
     local path, id = unpack(mounted)
     ifc.fs:RemoveSearchPath(path, id)
+  end
+
+  for _, command in ipairs(self.commands) do
+    ifc.cvar:UnregisterConCommand(command)
   end
 end
 

@@ -1,16 +1,24 @@
 local ffi = require "ffi"
 
 -- FFI definitions.
+require "9ui_devtools.engine.ICvar"
 require "9ui_devtools.engine.IFileSystem"
+require "9ui_devtools.engine.IPanel"
+require "9ui_devtools.engine.ISurface"
 
 
----@type table<string, unknown>
 local interfaces = {
+  cvar = ffi.cast("ICvar *", nil),
   fs = ffi.cast("IFileSystem *", nil),
+  panel = ffi.cast("IPanel *", nil),
+  surface = ffi.cast("ISurface *", nil),
 }
 
 local versions = {
+  [interfaces.cvar] = "VEngineCvar004",
   [interfaces.fs] = "VFileSystem022",
+  [interfaces.panel] = "VGUI_Panel009",
+  [interfaces.surface] = "VGUI_Surface030",
 }
 
 
@@ -37,6 +45,7 @@ function M.connect(interface_factory)
 end
 
 -- Make interfaces accessible though the module table.
+---@cast interfaces table<string, unknown>
 M = setmetatable(M, { __index = interfaces })
 
 return M
