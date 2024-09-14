@@ -1,6 +1,7 @@
 local ffi = require "ffi"
 
 -- FFI definitions.
+require "9ui_devtools.engine.IBaseFileSystem"
 require "9ui_devtools.engine.ICvar"
 require "9ui_devtools.engine.IFileSystem"
 require "9ui_devtools.engine.IPanel"
@@ -8,6 +9,7 @@ require "9ui_devtools.engine.ISurface"
 
 
 local interfaces = {
+  basefs = ffi.cast("IBaseFileSystem *", nil),
   cvar = ffi.cast("ICvar *", nil),
   fs = ffi.cast("IFileSystem *", nil),
   panel = ffi.cast("IPanel *", nil),
@@ -15,6 +17,7 @@ local interfaces = {
 }
 
 local versions = {
+  [interfaces.basefs] = "VBaseFileSystem011",
   [interfaces.cvar] = "VEngineCvar004",
   [interfaces.fs] = "VFileSystem022",
   [interfaces.panel] = "VGUI_Panel009",

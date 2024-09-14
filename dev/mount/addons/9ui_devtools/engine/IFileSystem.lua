@@ -10,5 +10,8 @@ return class {
     [8] = [[
       void RemoveSearchPath(const char *path, const char *pathID)
     ]],
+    [13] = [[
+      int GetSearchPath(const char *pathID, bool getPackFiles, char *out, int maxLenInChars)
+    ]],
   },
 }

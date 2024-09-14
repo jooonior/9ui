@@ -19,8 +19,18 @@ local Plugin = {
 function Plugin:Load(interface_factory)
   ifc.connect(interface_factory)
 
-  if ifc.fs == nil then
+  if ifc.fs == nil or ifc.basefs == nil then
     return false
+  end
+
+  -- Unmount custom HUDs.
+  for path in plugin.path.get_search_paths("custom_mod") do
+    if ifc.basefs:FileExists(path .. "/info.vdf", nil) then
+      for _, id in ipairs {"game", "mod", "custom_mod"} do
+        ifc.fs:RemoveSearchPath(path, id)
+      end
+      print(("[9ui_devtools] unmount: %s"):format(path))
+    end
   end
 
   local pattern = ("dev/mount/addons/9ui_devtools/init.lua"):gsub("/", "[\\/]")
