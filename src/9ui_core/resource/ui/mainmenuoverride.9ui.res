@@ -147,6 +147,10 @@
 
   DashboardDimmer
   {
-    // TODO: Look the same after VGUI reload.
+    controlName Button  // hardcoded
+
+    // VGUI reload applies border from ClientScheme.
+    // We can't change that, but we can hide it.
+    paintBorder 0
   }
 }
