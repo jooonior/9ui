@@ -6,7 +6,7 @@
     controlName Panel
 
     yPos 0
-    zPos 10
+    zPos "$(zPos.MainMenu - 10)"
 
     wide $(Menu.SideBar.Width)
     tall 480

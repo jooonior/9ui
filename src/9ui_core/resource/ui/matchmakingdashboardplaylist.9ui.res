@@ -9,10 +9,12 @@
   {
     xPos r0
     yPos 0
-    zPos 10002  // above MMDashboard
+    zPos "$(zPos.ExpandableList)"
     tall f0
     wide "f-$(overflow)"
     proportionalToParent 0
+
+    // NOTE: Pin is ignored after VGUI reload.
   }
 
   {DELETE
@@ -23,14 +25,22 @@
   playlist
   {
     xPos "rs1-$(Menu.SideBar.Width)"
-    yPos 0
+    yPos "$(Menu.SideBar.Width)"
+    zPos 0
+    wide 300
+    tall "$(Menu.SideBar.Width)"
   }
 
   CloseButton
   {
     {EXPAND FillParent}
-    zPos "$(../playlist/zpos - 1)"
+    zPos -1
     alpha 0
+  }
+
+  ReturnButton
+  {
+    visible 0
   }
 
   FakeDashboardDimmer
@@ -39,6 +49,7 @@
 
     xPos 0
     yPos rs1
+    zPos -1
     wide f0
     // tall 60
     tall p0.124  // pixel-perfect

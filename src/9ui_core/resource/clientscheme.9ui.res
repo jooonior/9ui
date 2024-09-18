@@ -6,7 +6,7 @@ Scheme
   {
     // Color names must not start with a digit (or a dot).
 
-    _9ui.SideBar.BG "127 127 127 100"
+    _9ui.SideBar.BG "93 93 93 255"
 
     _9ui.Button.Normal.FG "180 180 180 230"
     _9ui.Button.Hover.FG "219 109 59 220"

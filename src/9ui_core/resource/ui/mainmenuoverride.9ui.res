@@ -90,7 +90,7 @@
 
     xPos 0
     yPos 80
-    zPos 15
+    zPos $(zPos.MainMenu)
 
     wide $(Menu.SideBar.Width)
     tall 200

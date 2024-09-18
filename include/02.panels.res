@@ -23,6 +23,12 @@
 
 // PINS
 
+{DEFINE Pin anchor corner sibling_corner} {
+  pin_to_sibling $(anchor)
+  pin_corner_to_sibling $(corner)
+  pin_to_sibling_corner $(sibling_corner)
+}
+
 {DEFINE PinAbove anchor} {
   pin_to_sibling $(anchor)
   pin_corner_to_sibling $(PIN_CENTER_BOTTOM)
@@ -97,7 +103,7 @@
 
   xPos 0
   yPos 0
-  zPos 15
+  zPos $(zPos.MainMenu)
 
   wide $(Menu.SideBar.Width)
 

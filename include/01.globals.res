@@ -18,3 +18,9 @@
 {DEFINE ICON_SUITCASE} S
 {DEFINE ICON_TERMINAL} T
 {DEFINE ICON_GEARS} g
+
+// Z-order.
+{DEFINE zPos.DashboardDimmer} 1000  // hardcoded
+{DEFINE zPos.ExpandableList} 1100
+{DEFINE zPos.MainMenu} 1200
+{DEFINE zPos.MMDashboard} 1300
