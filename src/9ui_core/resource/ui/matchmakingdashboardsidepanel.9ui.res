@@ -14,22 +14,20 @@
   Shade { visible 0 }
   InnerGradient { visible 0 }
 
-  // Imitates hover effect of `MMDashboard > TopBar > PlayButton`, which gets
-  // covered up by the side panel when it expands.
-  FakePlayButton
+  ReturnButton
   {
-    {EXPAND PlayButton}
+    // Only visible in `ExpandableList`.
+    if_left
+    {
+      visible 0
+    }
+  }
 
-    xPos "$(ExpandableList.Width)-s1"
-    yPos 0
-    proportionalToParent 1
-
-    font 9ui.icons.28
-    labelText "$(ICON_PLAY)"
-
-    command "nav_close"  // close all side panels
-
-    // Should be visible only when hovered.
-    defaultFgColor_override "0 0 0 0"
+  // Closes all side panels when clicking away.
+  CloseButton
+  {
+    {EXPAND FillParent}
+    zPos -1
+    alpha 0
   }
 }

@@ -6,27 +6,33 @@
     xPos 0
     yPos 0
 
-    // For some reason, relative sizes are way smaller than thay should be.
-    wide 100
-    tall $(Menu.SideBar.Width)
+    wide "$(PlaylistEntry.Width)"
+    tall "$(PlaylistEntry.Height)"
 
+    // Looks like parent does not resolve properly and sizes end up wrong.
     proportionalToParent 0
   }
 
   CasualEntry
   {
     {EXPAND Entry}
+    // Looks like these only work with localized strings.
+    button_token "#9ui_PlaylistButton_Casual"
   }
 
   CompetitiveEntry
   {
     {EXPAND Entry}
+    button_token "#9ui_PlaylistButton_Comp"
+
     {EXPAND PinRightTo CasualEntry}
   }
 
   MvMEntry
   {
     {EXPAND Entry}
+    button_token "#9ui_PlaylistButton_MvM"
+
     {EXPAND PinRightTo CompetitiveEntry}
   }
 }

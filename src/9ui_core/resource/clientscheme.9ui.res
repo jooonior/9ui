@@ -8,6 +8,11 @@ Scheme
 
     _9ui.SideBar.BG "93 93 93 255"
 
+    _9ui.FlatButton.BG.Default "93 93 93 184"
+    _9ui.FlatButton.BG.Hover "112 112 112 202"
+    _9ui.FlatButton.FG.Default "240 240 240 238"
+    _9ui.FlatButton.FG.Hover _9ui.FlatButton.FG.Default
+
     _9ui.Button.Normal.FG "180 180 180 230"
     _9ui.Button.Hover.FG "219 109 59 220"
   }

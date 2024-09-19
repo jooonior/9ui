@@ -5,7 +5,7 @@
   CasualCriteria
   {
     xPos r0
-    yPos 0
+    yPos "$(PlaylistEntry.Height)"
     zPos "$(zPos.ExpandableList + 1)"
     wide "$(ExpandableList.Width)"
   }
