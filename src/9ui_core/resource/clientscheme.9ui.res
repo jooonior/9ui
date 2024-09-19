@@ -16,9 +16,9 @@ Scheme
   {
     9ui_Blush
     {
-			bordertype image
-			backgroundtype 2
-			image "replay/thumbnails/9ui/blush"
+      bordertype image
+      backgroundtype 2
+      image "replay/thumbnails/9ui/blush"
     }
   }
 
@@ -42,9 +42,9 @@ Scheme
       }
     }
 
-		{EXPAND FontRange 9ui.icons 9ui_icons}
+    {EXPAND FontRange 9ui.icons 9ui_icons}
 
-		{EXPAND FontRange 9ui.thin Teko}
+    {EXPAND FontRange 9ui.thin Teko}
   }
 
   CustomFontFiles
