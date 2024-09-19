@@ -111,3 +111,10 @@
   armedFgColor_override "_9ui.Button.Hover.FG"
   depressedFgColor_override "_9ui.Button.Hover.FG"
 }
+
+{DEFINE PlayButton} {
+  {EXPAND SideBarButton}
+
+  font 9ui.icons.28
+  labelText "$(ICON_PLAY)"
+}

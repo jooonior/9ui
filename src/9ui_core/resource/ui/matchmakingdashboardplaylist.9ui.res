@@ -2,19 +2,23 @@
 
 "Resource/UI/MatchMakingDashboardPlayList.res"
 {
-  // How much `ExpandableList` extends off-screen.
-  {DEFINE overflow} 10000
-
   ExpandableList
   {
-    xPos r0
+    xPos r0  // hardcoded to transition between `r0` and `rs1`
     yPos 0
     zPos "$(zPos.ExpandableList)"
     tall f0
-    wide "f-$(overflow)"
+    // Much wider than the screen to exploit the xPos transition for sliding a
+    // gradient across the screen, creating a fade effect. The gradient lies
+    // inside `ExplanationManager`, which is pinned to us (for z-order reasons).
+    wide "f-$(ExpandableList.Overflow + ExpandableList.Width)"
     proportionalToParent 0
 
-    // NOTE: Pin is ignored after VGUI reload.
+    // Offset xPos so that only the left-most part slides on-screen.
+    // `MMDashboard` dimensions are set specifically for this purpose.
+    {EXPAND Pin MMDashboard $(PIN_TOPLEFT) $(PIN_TOPRIGHT)}
+    // Pin is not updated after a VGUI reload, which means that the anchor must
+    // not be invalidated by said reload (as `MainMenuOverride.res` panels are).
   }
 
   {DELETE
@@ -24,8 +28,8 @@
 
   playlist
   {
-    xPos "rs1-$(Menu.SideBar.Width)"
-    yPos "$(Menu.SideBar.Width)"
+    xPos 0
+    yPos 0
     zPos 0
     wide 300
     tall "$(Menu.SideBar.Width)"
@@ -41,62 +45,5 @@
   ReturnButton
   {
     visible 0
-  }
-
-  FakeDashboardDimmer
-  {
-    controlName EditablePanel
-
-    xPos 0
-    yPos rs1
-    zPos -1
-    wide f0
-    // tall 60
-    tall p0.124  // pixel-perfect
-    proportionalToParent 1
-
-    mouseInputEnabled 0
-
-    Background_anchor
-    {
-      controlName Panel
-
-      xPos rs1
-      yPos 0
-      tall f0
-      wide 0
-      proportionalToParent 1
-    }
-
-    Background
-    {
-      controlName Panel
-
-      xPos 0
-      yPos 0
-      wide f0
-      tall f0
-
-      bgColor_override "0 0 0 230"
-
-      {EXPAND PinLeftTo Background_anchor}
-    }
-
-    // Creates a fade effect as `ExpandableList` opens.
-    Fade
-    {
-      controlName ImagePanel
-
-      xPos 0
-      yPos 0
-      wide $(overflow)
-      tall f0
-      proportionalToParent 1
-
-      image "replay/thumbnails/9ui/dashboard_dimmer_fade"
-      scaleImage 1
-
-      {EXPAND PinLeftTo Background}
-    }
   }
 }

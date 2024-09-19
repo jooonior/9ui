@@ -24,8 +24,6 @@
   {
     {EXPAND SideBarButton}
 
-    yPos "$(Menu.SideBar.Width * -1)"
-
     font 9ui.icons.20
     labelText "$(ICON_GLOBE)"
 

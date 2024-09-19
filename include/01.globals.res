@@ -21,6 +21,7 @@
 
 // Z-order.
 {DEFINE zPos.DashboardDimmer} 1000  // hardcoded
-{DEFINE zPos.ExpandableList} 1100
-{DEFINE zPos.MainMenu} 1200
-{DEFINE zPos.MMDashboard} 1300
+{DEFINE zPos.Background} 1100
+{DEFINE zPos.MMDashboard} 1200
+{DEFINE zPos.ExpandableList} 1300
+{DEFINE zPos.MainMenu} 1400

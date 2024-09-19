@@ -2,3 +2,12 @@ exec valve.rc.stock
 
 // Set `ExpandableList` slide time to match `DashboardDimmer` alpha animation.
 tf_dashboard_slide_time 0.4
+
+// Disable all explanation popups.
+exec 9ui/no_explanations
+
+// Enable "we've added training" explanation popup shown when `ExpandableList`
+// is first opened. As long as no explanations are shown earlier, this results
+// in `ExplanationManager` being initialized right after `ExpandableList`, and
+// allows pinning the former to the latter.
+tf_training_has_prompted_for_training 0
