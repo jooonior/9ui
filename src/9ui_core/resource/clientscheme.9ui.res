@@ -45,6 +45,8 @@ Scheme
     {EXPAND FontRange 9ui.icons 9ui_icons}
 
     {EXPAND FontRange 9ui.thin Teko}
+
+    {EXPAND FontRange 9ui.thick CocogooseProTrial}
   }
 
   CustomFontFiles
@@ -59,6 +61,12 @@ Scheme
     {
       font "resource/fonts/Teko.ttf"
       name "Teko"
+    }
+
+    Cocogoose
+    {
+      font "resource/fonts/Cocogoose-Pro-Regular-trial.ttf"
+      name "CocogooseProTrial"
     }
   }
 }
