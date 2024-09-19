@@ -1,3 +1,12 @@
+// `config.cfg` is executed before this.
+
+// Load localization strings from `closecaptions_9ui.txt`.
+cc_lang 9ui
+// Restore `cc_lang` value (either its in `config.cfg` or it was empty).
+cc_lang ""
+exec config  // no harm in exec'ing it again
+
+// Executes `autoexec.cfg`, among other things.
 exec valve.rc.stock
 
 // Set `ExpandableList` slide time to match `DashboardDimmer` alpha animation.
