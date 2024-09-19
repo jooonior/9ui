@@ -96,6 +96,8 @@
   textAlignment center
 
   {EXPAND Clicky}
+
+  stay_armed_on_click 1
 }
 
 {DEFINE SideBarButton} {
@@ -117,4 +119,6 @@
 
   font 9ui.icons.28
   labelText "$(ICON_PLAY)"
+
+  stay_armed_on_click 0
 }
