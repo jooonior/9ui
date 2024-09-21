@@ -71,7 +71,7 @@
   pin_to_sibling_corner $(PIN_CENTER_LEFT)
 }
 
-{DEFINE PinOverLeftOf anchor} {
+{DEFINE PinOverRightOf anchor} {
   pin_to_sibling $(anchor)
   pin_corner_to_sibling $(PIN_CENTER_RIGHT)
   pin_to_sibling_corner $(PIN_CENTER_RIGHT)
