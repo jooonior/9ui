@@ -1,3 +1,9 @@
+// Base for expandable matchmaking side panels.
+// ---
+// base: CasualCriteria => ./MatchMakingDashboardCasualCriteria.res
+// base: ExpandableList => ./MatchMakingDashboardPlaylist.res
+
+
 {PRAGMA FLAGS expand override}
 
 "Resource/UI/MatchMakingDashboardSidePanel.res"

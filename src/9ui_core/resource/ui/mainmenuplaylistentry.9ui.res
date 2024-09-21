@@ -1,3 +1,8 @@
+// Matchmaking gamemode list entry.
+// ---
+// parent: => ./MatchMakingPlaylist.res
+
+
 {PRAGMA FLAGS expand override}
 
 "Resource/UI/MainMenuPlayListEntry.res"

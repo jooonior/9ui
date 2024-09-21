@@ -1,3 +1,10 @@
+// Container for explanation popups (i.e. "this button does that").
+//
+// Creation deferred until an explanation needs to be shown.
+// ---
+// parent: MainMenuOverride => ./MainMenuOverride.res
+
+
 {PRAGMA FLAGS expand override}
 
 "Resource/UI/GlobalExplanations.res"

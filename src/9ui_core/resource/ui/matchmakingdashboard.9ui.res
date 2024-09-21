@@ -1,3 +1,12 @@
+// Container for matchmaking-related buttons (mostly).
+//
+// Hardcoded to move between `MainMenuOverride` and `character_info`, whichever
+// is currently open.
+// ---
+// parent: MainMenuOverride => ./MainMenuOverride.res
+// parent: character_info => ./CharInfoPanel.res
+
+
 {PRAGMA FLAGS expand override}
 
 "Resource/UI/MatchMakingDashboard.res"
@@ -52,7 +61,7 @@
       labelText "$(ICON_PLAY)"
 
       {INHERIT ../FindAGameButton
-        command
+        command  // opens `ExpandableList` => ./MatchMakingDashboardPlaylist.res
         actionSignalLevel
       }
 

@@ -1,3 +1,9 @@
+// Gamemode selection buttons contained in the side panel that expands when the
+// play button is clicked.
+//
+// parent: playlist => ./MatchMakingDashboardPlaylist.res
+
+
 {PRAGMA FLAGS expand override}
 
 "Resource/UI/MatchMakingDashboardCasualCriteria.res"

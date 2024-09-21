@@ -1,3 +1,9 @@
+// Side bars contained in main menu and inventory root panels.
+//
+// base: MainMenuOverride => ./MainMenuOverride.res
+// base: character_info => ./CharInfoPanel.res
+
+
 {PRAGMA FLAGS expand override}
 
 "Resource/UI/MenuSideBars.res"

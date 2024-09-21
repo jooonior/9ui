@@ -1,3 +1,8 @@
+// Steam friend list entry.
+// ---
+// parent: friendpanel_kv => ./MainMenuOverride.res
+
+
 {PRAGMA FLAGS expand override}
 
 "Resource/UI/SteamFriendPanel.res"
@@ -52,6 +57,7 @@
 
     font 9ui.icons.127
     textAlignment north
+    // Text consisting of full-width that serves as a solid background.
     labelText "$(ICON_BLOCK)$(ICON_BLOCK)$(ICON_BLOCK)$(ICON_BLOCK)"
 
     {EXPAND PinBelow avatar}

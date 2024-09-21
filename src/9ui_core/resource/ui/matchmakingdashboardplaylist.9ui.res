@@ -1,4 +1,15 @@
+// Expandable side panel containing gamemode selection buttons. Expands when 
+// the play button is clicked.
+//
+// Creation deferred until first expanded.
+// ---
+// parent: MainMenuOverride => ./MainMenuOverride.res
+
+
 {PRAGMA FLAGS expand override}
+
+// Stock file contains:
+//   #base "MatchMakingDashboardSidePanel.res"
 
 "Resource/UI/MatchMakingDashboardPlayList.res"
 {
@@ -33,6 +44,8 @@
     zPos 0
     wide "$(PlaylistEntry.Width * PlaylistEntry.Count)"
     tall "$(PlaylistEntry.Height)"
+
+    // => ./MatchMakingPlaylist.res
   }
 
   // Covers up `playlist` when one of the mode "child" panels is open.
