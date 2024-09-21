@@ -8,4 +8,6 @@
 // How much `ExpandableList` extends off-screen.
 {DEFINE ExpandableList.Overflow} 10000
 // How much of `ExpandableList` is visible (when it is open).
-{DEFINE ExpandableList.Width} "$(PlaylistEntry.Width * PlaylistEntry.Count + Menu.SideBar.Width)"
+{DEFINE ExpandableList.InnerWidth} "$(PlaylistEntry.Width * PlaylistEntry.Count)"
+// Width of `ExpandableList` contents.
+{DEFINE ExpandableList.OuterWidth} "$(ExpandableList.InnerWidth + Menu.SideBar.Width)"

@@ -14,7 +14,7 @@
   // transition, which looks close to `DashboardDimmer` fading in/out.
   ExplanationManager
   {
-    xPos "$(ExpandableList.Width * -1)"
+    xPos "$(ExpandableList.OuterWidth * -1)"
     yPos 0
     zPos "$(zPos.DashboardDimmer - 1)"
 

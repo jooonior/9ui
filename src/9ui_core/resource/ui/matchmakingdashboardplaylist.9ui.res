@@ -22,7 +22,7 @@
     // Much wider than the screen to exploit the xPos transition for sliding a
     // gradient across the screen, creating a fade effect. The gradient lies
     // inside `ExplanationManager`, which is pinned to us (for z-order reasons).
-    wide "f-$(ExpandableList.Overflow + ExpandableList.Width)"
+    wide "f-$(ExpandableList.Overflow + ExpandableList.OuterWidth)"
     proportionalToParent 0
 
     // Offset xPos so that only the left-most part slides on-screen.
@@ -42,7 +42,7 @@
     xPos 0
     yPos 0
     zPos 0
-    wide "$(PlaylistEntry.Width * PlaylistEntry.Count)"
+    wide "$(ExpandableList.InnerWidth)"
     tall "$(PlaylistEntry.Height)"
 
     // => ./MatchMakingPlaylist.res
@@ -75,7 +75,7 @@
   {
     {EXPAND PlayButton}
 
-    xPos "$(ExpandableList.Width)-s1"
+    xPos "$(ExpandableList.OuterWidth)-s1"
     yPos 0
     proportionalToParent 1
 

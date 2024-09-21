@@ -15,6 +15,6 @@
     xPos r0
     yPos "$(PlaylistEntry.Height)"
     zPos "$(zPos.ExpandableList + 1)"
-    wide "$(ExpandableList.Width)"
+    wide "$(ExpandableList.OuterWidth)"
   }
 }
