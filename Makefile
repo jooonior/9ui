@@ -39,6 +39,8 @@ OUTPUTS += $(foreach f,$(filter %.svg,$(OUTPUTS)),$(call RecursiveBasename,$f).t
 OUTPUTS := $(filter-out %.svg,$(OUTPUTS))
 # Add `info.vdf` file for each top-level source subdirectory.
 OUTPUTS += $(patsubst $(SOURCE_DIR)%/.,$(OUTPUT_DIR)%/info.vdf,$(wildcard $(SOURCE_DIR)/*/.))
+# Strip `.py` extension from output files.
+OUTPUTS := $(patsubst %.py,%,$(OUTPUTS))
 # Remove duplicates.
 OUTPUTS := $(sort $(OUTPUTS))
 
@@ -133,6 +135,11 @@ $(OUTPUT_DIR)/%.ttf: $$(or $$(wildcard $(SOURCE_DIR)/%.*.svg),__never__) | $$(@D
 	@$(PYTHON) dev/scripts/mkfont.py $(notdir $*) $@ $(call ParseGlyphNames,$(SOURCE_DIR)/$*.,$^)
 
 ParseGlyphNames = $(foreach f,$2,$(firstword $(subst ., ,$(patsubst $1%,%,$f)))=$f)
+
+# Runs Python scripts that generate files.
+$(OUTPUT_DIR)/%: $(SOURCE_DIR)/%.py | $$(@D)/
+	@$(call Echo,$@,$^)
+	@$(PYTHON) $^ > $@
 
 # Copies files that don't match any more specific rule.
 $(OUTPUT_DIR)/%: $(SOURCE_DIR)/% | $$(@D)/ DUMMY-1
