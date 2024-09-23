@@ -52,6 +52,21 @@ Scheme
     {EXPAND FontRange 9ui.thin Teko}
 
     {EXPAND FontRange 9ui.thick CocogooseProTrial}
+
+    // Special blank font with zero width and height.
+    9ui.blank
+    {
+      1
+      {
+        bitmap 1
+        name 9ui_blank
+      }
+    }
+  }
+
+  BitmapFontFiles
+  {
+    9ui_blank "materials/vgui/fonts/9ui_blank.vbf"
   }
 
   CustomFontFiles
