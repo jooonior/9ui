@@ -18,7 +18,7 @@
     xPos r0  // hardcoded to transition between `r0` and `rs1`
     yPos 0
     zPos "$(zPos.ExpandableList)"
-    tall f0
+    tall "$(PlaylistEntry.Height)"
     // Much wider than the screen to exploit the xPos transition for sliding a
     // gradient across the screen, creating a fade effect. The gradient lies
     // inside `ExplanationManager`, which is pinned to us (for z-order reasons).

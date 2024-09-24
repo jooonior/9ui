@@ -24,7 +24,7 @@
     mouseInputEnabled 0
     keyboardInputEnabled 0
 
-    {EXPAND Pin ExpandableList $(PIN_BOTTOMRIGHT) $(PIN_BOTTOMLEFT)}
+    {EXPAND Pin ExpandableList $(PIN_TOPRIGHT) $(PIN_TOPLEFT)}
   }
 
   FakeDashboardDimmer
