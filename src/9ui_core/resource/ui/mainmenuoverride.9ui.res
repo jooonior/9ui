@@ -3,8 +3,6 @@
 
 #base "menusidebars.res"
 
-{PRAGMA FLAGS expand override}
-
 "Resource/UI/MainMenuOverride.res"
 {
   MainMenuOverride

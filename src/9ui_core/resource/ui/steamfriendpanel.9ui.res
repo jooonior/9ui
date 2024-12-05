@@ -3,8 +3,6 @@
 // parent: friendpanel_kv => ./MainMenuOverride.res
 
 
-{PRAGMA FLAGS expand override}
-
 "Resource/UI/SteamFriendPanel.res"
 {
   avatar

@@ -3,8 +3,6 @@
 // parent: => ./MatchMakingPlaylist.res
 
 
-{PRAGMA FLAGS expand override}
-
 "Resource/UI/MainMenuPlayListEntry.res"
 {
   {DELETE

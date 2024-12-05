@@ -6,8 +6,6 @@
 // parent: MainMenuOverride => ./MainMenuOverride.res
 
 
-{PRAGMA FLAGS expand override}
-
 // Stock file contains:
 //   #base "MatchMakingDashboardSidePanel.res"
 

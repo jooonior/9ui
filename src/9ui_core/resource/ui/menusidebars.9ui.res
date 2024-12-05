@@ -4,8 +4,6 @@
 // base: character_info => ./CharInfoPanel.res
 
 
-{PRAGMA FLAGS expand override}
-
 "Resource/UI/MenuSideBars.res"
 {
   // Z-order layout requires that each sidebar is cut into two panels. The top,

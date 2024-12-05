@@ -4,8 +4,6 @@
 // parent: playlist => ./MatchMakingDashboardPlaylist.res
 
 
-{PRAGMA FLAGS expand override}
-
 "Resource/UI/MatchMakingDashboardCasualCriteria.res"
 {
   {DEFINE Entry} {

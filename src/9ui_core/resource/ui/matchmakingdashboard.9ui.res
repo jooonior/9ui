@@ -7,8 +7,6 @@
 // parent: character_info => ./CharInfoPanel.res
 
 
-{PRAGMA FLAGS expand override}
-
 "Resource/UI/MatchMakingDashboard.res"
 {
   MMDashboard

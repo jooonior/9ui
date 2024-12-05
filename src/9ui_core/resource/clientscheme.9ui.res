@@ -1,5 +1,3 @@
-{PRAGMA FLAGS expand override}
-
 Scheme
 {
   Colors

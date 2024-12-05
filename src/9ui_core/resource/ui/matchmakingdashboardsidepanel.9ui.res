@@ -4,8 +4,6 @@
 // base: ExpandableList => ./MatchMakingDashboardPlaylist.res
 
 
-{PRAGMA FLAGS expand override}
-
 "Resource/UI/MatchMakingDashboardSidePanel.res"
 {
   {DELETE

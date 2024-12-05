@@ -5,8 +5,6 @@
 // parent: MainMenuOverride => ./MainMenuOverride.res
 
 
-{PRAGMA FLAGS expand override}
-
 "Resource/UI/GlobalExplanations.res"
 {
   // This panel is repurposed as a gradient that slides across the screen as
