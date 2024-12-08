@@ -3,8 +3,6 @@
 // Created on game load. Drawn over main menu.
 
 
-#base "menusidebars.res"
-
 "Resource/UI/CharInfoPanel.res"
 {
   character_info
