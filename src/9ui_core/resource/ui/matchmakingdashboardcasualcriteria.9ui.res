@@ -11,8 +11,9 @@
   CasualCriteria
   {
     xPos r0
-    yPos "$(PlaylistEntry.Height)"
+    yPos "$(Menu.SideBar.Width + PlaylistEntry.Height)"
     zPos "$(zPos.ExpandableList + 1)"
-    wide "$(ExpandableList.OuterWidth)"
+    wide "$(ExpandableList.Width)"
+    tall "f$(./yPos + 60)"
   }
 }

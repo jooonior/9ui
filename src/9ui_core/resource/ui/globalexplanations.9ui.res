@@ -12,8 +12,8 @@
   // transition, which looks close to `DashboardDimmer` fading in/out.
   ExplanationManager
   {
-    xPos "$(ExpandableList.OuterWidth * -1)"
-    yPos 0
+    xPos "$(ExpandableList.Width * -1)"
+    yPos "$(MenuBar.size)"  // offset back to top of screen
     zPos "$(zPos.DashboardDimmer - 1)"
 
     wide "f-$(ExpandableList.Overflow)"

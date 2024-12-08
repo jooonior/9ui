@@ -79,46 +79,47 @@
 
 // BUTTONS
 
-{DEFINE Clicky} {
+{DEFINE BaseButton} {
+  controlName CExButton
+
+  paintBorder 0
+  paintBackground 0
+
+  textAlignment center
+
+  stay_armed_on_click 1
+
   sound_depressed "ui/buttonclick.wav"
   sound_released "ui/buttonclickrelease.wav"
 }
 
 {DEFINE FlatButton} {
-  controlName CExButton
+  {EXPAND BaseButton}
 
-  wide o1
-  tall o1
+  paintBackground 1
+  paintBackgroundType 0
+  roundedCorners 0
 
-  paintBackground 0
-  paintBorder 0
+  defaultBgColor_override _9ui.FlatButton.BG.Default
+  armedBgColor_override _9ui.FlatButton.BG.Hover
+  depressedBgColor_override _9ui.FlatButton.BG.Hover
 
-  textAlignment center
-
-  {EXPAND Clicky}
-
-  stay_armed_on_click 1
+  defaultFgColor_override _9ui.FlatButton.FG.Default
+  armedFgColor_override _9ui.FlatButton.FG.Hover
+  depressedFgColor_override _9ui.FlatButton.BG.Hover
 }
 
 {DEFINE SideBarButton} {
-  {EXPAND FlatButton}
+  {EXPAND BaseButton}
 
   xPos 0
   yPos 0
   zPos $(zPos.MainMenu)
 
   wide $(Menu.SideBar.Width)
+  tall o1
 
   defaultFgColor_override "_9ui.Button.Normal.FG"
   armedFgColor_override "_9ui.Button.Hover.FG"
   depressedFgColor_override "_9ui.Button.Hover.FG"
-}
-
-{DEFINE PlayButton} {
-  {EXPAND SideBarButton}
-
-  font 9ui.icons.28
-  labelText "$(ICON_PLAY)"
-
-  stay_armed_on_click 0
 }

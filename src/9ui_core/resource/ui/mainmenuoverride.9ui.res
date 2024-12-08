@@ -29,12 +29,12 @@
   {
     {EXPAND SideBarButton}
 
-    font 9ui.icons.20
+    font 9ui.icons.26
     labelText "$(ICON_GLOBE)"
 
     command "engine gamemenucommand OpenServerBrowser"
 
-    {EXPAND PinOverTopOf SideBar.Right}
+    {EXPAND PinOverTopOf SideBar.Left}
   }
 
   Backpack
@@ -82,73 +82,11 @@
 
     command "engine quit"
 
-    {EXPAND PinOverBottomOf SideBar.Right}
+    {EXPAND PinOverBottomOf SideBar.Left}
   }
 
-  FriendsContainer
-  {
-    {CLEAR}
-
-    controlName EditablePanel
-
-    xPos 0
-    yPos 80
-    zPos $(zPos.MainMenu)
-
-    wide $(Menu.SideBar.Width)
-    tall 200
-
-    SteamFriendsList
-    {
-      controlName CSteamFriendsListPanel
-
-      xPos 0
-      yPos 0
-
-      wide f0
-      tall f0
-      proportionalToParent 1
-
-      {DEFINE gap} 2
-
-      columns_count 1
-      inset_x $(gap)
-      inset_y 0
-      row_gap $(gap)
-      column_gap 0
-      restrict_width 0
-
-      // Template for list entries.
-      friendpanel_kv
-      {
-        wide "f$(gap * 2)"
-        tall o1.23
-        proportionalToParent 1
-
-        // => ./SteamFriendPanel.res
-      }
-
-      ScrollBar
-      {
-        controlName ScrollBar
-
-        // The is a small margin around the Slider which I can't get rid off.
-        // So instead we shift the whole ScrollBar off-screen by a bit.
-        xPos -1
-        yPos 0
-
-        wide 3
-        tall f0
-        proportionalToParent 1
-
-        noButtons 1
-
-        Slider
-        {
-          fgColor_override "255 0 0 255"
-        }
-      }
-    }
+  {DELETE
+    FriendsContainer
   }
 
   // The actual `DashboardDimmer` panel gets created from code long after

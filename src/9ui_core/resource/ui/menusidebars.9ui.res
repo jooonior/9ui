@@ -12,11 +12,12 @@
   {DEFINE SideBar} {
     controlName Panel
 
-    yPos "$(Menu.SideBar.Width)"
-    zPos "$(zPos.MainMenu - 10)"  // below menu buttons, above `ExpandableList`
+    yPos 0
+    zPos "$(zPos.Background + 10)"
 
     wide "$(Menu.SideBar.Width)"
-    tall "f$(Menu.SideBar.Width)"
+    tall f0
+    proportionalToParent 0
 
     bgColor_override _9ui.SideBar.BG
 
@@ -29,35 +30,4 @@
 
     xPos 0
   }
-
-  SideBar.Right
-  {
-    {EXPAND SideBar}
-
-    xPos rs1
-  }
-
-  {DEFINE SideBar.Top} {
-    {EXPAND SideBar}
-
-    yPos 0
-    zPos "$(zPos.MMDashboard - 10)"  // below `MMDashboard`
-
-    tall "$(Menu.SideBar.Width)"
-  }
-
-  SideBar.TopLeft
-  {
-    {EXPAND SideBar.Top}
-
-    xPos 0
-  }
-
-  SideBar.TopRight
-  {
-    {EXPAND SideBar.Top}
-
-    xPos rs1
-  }
-
 }

@@ -49,7 +49,7 @@
     // Easier than dealing with hardcoded properties of `FindAGameButton`.
     PlayButton
     {
-      {EXPAND PlayButton}
+      {EXPAND SideBarButton}
 
       xPos rs1
       yPos 0
@@ -58,6 +58,8 @@
       font 9ui.icons.28
       labelText "$(ICON_PLAY)"
 
+      stay_armed_on_click 0
+
       {INHERIT ../FindAGameButton
         command  // opens `ExpandableList` => ./MatchMakingDashboardPlaylist.res
         actionSignalLevel
@@ -65,6 +67,62 @@
 
       // After a VGUI reload, this color is used initially.
       fgColor "$(./defaultFgColor_override)"
+    }
+
+    ToggleChatButton
+    {
+      {EXPAND SideBarButton}
+
+      xPos "r$(ExpandableList.Width)"
+      yPos 0
+      wide o1
+      tall f0
+
+      font 9ui.icons.20
+      labelText "$(ICON_CHAT)"
+    }
+
+    {FOR n BETWEEN 1 5} {
+      "PartySlot$(n)"
+      {
+        xPos 0
+        yPos 0
+        tall f10
+        wide o1
+
+        {EXPAND PinRightTo "PartySlot$(n - 1)"}
+      }
+    }
+
+    PartySlot1
+    {
+      {EXPAND PinRightTo ToggleChatButton}
+    }
+
+    PartySlot0
+    {
+      xPos 0
+      yPos 0
+      tall f6
+      wide o1
+
+      {EXPAND PinRightTo PartySlot5}
+    }
+
+    Background
+    {
+      controlName Panel
+
+      zPos -1
+      wide f0
+      tall f0
+      proportionalToParent 0
+
+      bgColor_override _9ui.SideBar.BG
+
+      mouseInputEnabled 0
+
+      {EXPAND Pin ToggleChatButton $(PIN_TOPLEFT) $(PIN_TOPLEFT)}
     }
 
     // Close `ExpandableList` when clicking anywhere else.

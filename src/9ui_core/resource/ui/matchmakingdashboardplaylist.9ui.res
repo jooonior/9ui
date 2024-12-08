@@ -20,12 +20,12 @@
     // Much wider than the screen to exploit the xPos transition for sliding a
     // gradient across the screen, creating a fade effect. The gradient lies
     // inside `ExplanationManager`, which is pinned to us (for z-order reasons).
-    wide "f-$(ExpandableList.Overflow + ExpandableList.OuterWidth)"
+    wide "f-$(ExpandableList.Overflow + ExpandableList.Width)"
     proportionalToParent 0
 
     // Offset xPos so that only the left-most part slides on-screen.
     // `MMDashboard` dimensions are set specifically for this purpose.
-    {EXPAND Pin MMDashboard $(PIN_TOPLEFT) $(PIN_TOPRIGHT)}
+    {EXPAND Pin MMDashboard $(PIN_TOPLEFT) $(PIN_BOTTOMRIGHT)}
     // Pin is not updated after a VGUI reload, which means that the anchor must
     // not be invalidated by said reload (as `MainMenuOverride.res` panels are).
   }
@@ -40,13 +40,15 @@
     xPos 0
     yPos 0
     zPos 0
-    wide "$(ExpandableList.InnerWidth)"
-    tall "$(PlaylistEntry.Height)"
+    wide "$(PlaylistEntry.Width * PlaylistEntry.Count)"
+    tall f0
+    proportionalToParent 1
 
     // => ./MatchMakingPlaylist.res
   }
 
-  // Covers up `playlist` when one of the mode "child" panels is open.
+  // Covers up `playlist` when one of the matchmaking side panels is open.
+  // Closes all open matchmaking side panels when clicked.
   ReturnButton
   {
     {INHERIT ../playlist
@@ -67,22 +69,20 @@
     button_activation_type "$(ACTIVATE_ONPRESSED)"
   }
 
-  // Imitates hover effect of `MMDashboard > TopBar > PlayButton`, which gets
-  // covered up by the side panel when it expands.
-  FakePlayButton
+  // Closes `ExpandableList` and all open matchmaking side panels.
+  CloseButton2
   {
-    {EXPAND PlayButton}
+    {EXPAND FlatButton}
 
-    xPos "$(ExpandableList.OuterWidth)-s1"
-    yPos 0
+    tall f0
+    wide "$(ExpandableList.Width - ../playlist/wide)"
     proportionalToParent 1
 
-    font 9ui.icons.28
-    labelText "$(ICON_PLAY)"
+    {EXPAND PinRightTo playlist}
 
-    command "nav_close"  // close all side panels
+    font 9ui.icons.10
+    labelText "$(ICON_RIGHT)"
 
-    // Should be visible only when hovered.
-    defaultFgColor_override "0 0 0 0"
+    command "nav_close"
   }
 }
