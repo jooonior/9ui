@@ -7,22 +7,22 @@
 
 "Resource/UI/GlobalExplanations.res"
 {
-  // This panel is repurposed as a gradient that slides across the screen as
-  // `DashboardDimmer` appears. This creates an illusion of a opacity
+  // This panel is repurposed as a gradient that slides across the screen while
+  // `DashboardDimmer` appears. This creates an illusion of an opacity
   // transition, which looks close to `DashboardDimmer` fading in/out.
   ExplanationManager
   {
-    xPos "$(ExpandableList.Width * -1)"
+    xPos "$(-ExpandableList.width)"
     yPos "$(MenuBar.size)"  // offset back to top of screen
     zPos "$(zPos.DashboardDimmer - 1)"
 
-    wide "f-$(ExpandableList.Overflow)"
+    wide "f-$(ExpandableList.overflow)"
     tall f0
 
     mouseInputEnabled 0
     keyboardInputEnabled 0
 
-    {EXPAND Pin ExpandableList $(PIN_TOPRIGHT) $(PIN_TOPLEFT)}
+    {EXPAND Pin ExpandableList "$(PIN_TOPRIGHT)" "$(PIN_TOPLEFT)"}
   }
 
   FakeDashboardDimmer
@@ -33,6 +33,7 @@
     yPos rs1
     wide f0
     // tall 60  // off by a few pixels
+    // TODO: Check if this works with all resolutions.
     tall p0.124  // pixel-perfect
     proportionalToParent 1
 
@@ -69,7 +70,7 @@
 
       xPos 0
       yPos 0
-      wide "$(ExpandableList.Overflow)"
+      wide "$(ExpandableList.overflow)"
       tall f0
       proportionalToParent 1
 

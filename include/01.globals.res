@@ -30,5 +30,5 @@
 {DEFINE zPos.DashboardDimmer} 1000  // hardcoded
 {DEFINE zPos.Background} 1100
 {DEFINE zPos.MMDashboard} 1200
-{DEFINE zPos.ExpandableList} 1300
-{DEFINE zPos.MainMenu} 1400
+{DEFINE zPos.SideBar} 1300
+{DEFINE zPos.MMSidePanel} 1400

@@ -4,7 +4,7 @@ Scheme
   {
     // Color names must not start with a digit (or a dot).
 
-    _9ui.SideBar.BG "93 93 93 255"
+    _9ui.MenuBar.BG "93 93 93 255"
 
     _9ui.FlatButton.BG.Default "93 93 93 184"
     _9ui.FlatButton.BG.Hover "112 112 112 202"
@@ -41,7 +41,7 @@ Scheme
 
     {DEFINE FontRange name font} {
       {FOR size BETWEEN 1 128} {
-        {EXPAND Font $(name) $(font) $(size)}
+        {EXPAND Font "$(name)" "$(font)" "$(size)"}
       }
     }
 

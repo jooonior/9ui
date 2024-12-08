@@ -10,8 +10,8 @@
     xPos 0
     yPos 0
 
-    wide "$(PlaylistEntry.Width)"
-    tall "$(PlaylistEntry.Height)"
+    wide "$(PlaylistEntry.width)"
+    tall "$(PlaylistEntry.height)"
 
     // Looks like parent does not resolve properly and sizes end up wrong.
     proportionalToParent 0

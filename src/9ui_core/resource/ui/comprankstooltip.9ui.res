@@ -20,8 +20,8 @@
 
     xPos 0
     yPos 0
-    zPos "$(zPos.MainMenu)"
-    wide "$(Menu.SideBar.Width)"
+    zPos "$(zPos.SideBar)"
+    wide "$(MenuBar.size)"
     tall f0
     proportionalToParent 0
   }
@@ -35,13 +35,13 @@
     tall f0
     proportionalToParent 1
 
-    bgColor_override _9ui.SideBar.BG
+    bgColor_override _9ui.MenuBar.BG
 
     mouseInputEnabled 0
   }
 
   {DEFINE MainMenuButton} {
-    {EXPAND SideBarButton}
+    {EXPAND MenuBarButton}
 
     wide f0
     tall o1

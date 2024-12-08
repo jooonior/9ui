@@ -1,7 +1,8 @@
 // Container for matchmaking-related buttons (mostly).
 //
-// Hardcoded to move between `MainMenuOverride` and `character_info`, whichever
-// is currently open.
+// Hardcoded to always move into the currently focused UI root panel. Parent
+// reference is not updated when this happens, which lets us run commands inside
+// `MainMenuOverride` from other root panels too.
 // ---
 // parent: MainMenuOverride => ./MainMenuOverride.res
 // parent: character_info => ./CharInfoPanel.res
@@ -13,13 +14,14 @@
   {
     xPos 0
     yPos 0
-    zPos $(zPos.MMDashboard)
+    zPos "$(zPos.MMDashboard)"
     // Extends off-screen and serves as anchor for `ExpandableList`.
-    wide "f-$(ExpandableList.Overflow)"
-    tall $(Menu.SideBar.Width)
+    wide "f-$(ExpandableList.overflow)"
+    tall "$(MenuBar.size)"
 
+    // TODO: What are these for?
     collapsed_height 0
-    expanded_height $(./tall)
+    expanded_height "$(./tall)"
     resize_time 0
   }
 
@@ -28,7 +30,7 @@
     xPos 0
     yPos 0
     wide f0
-    tall "$(Menu.SideBar.Width)"
+    tall "$(MenuBar.size)"
     proportionalToParent 0
 
     {DELETE
@@ -49,7 +51,7 @@
     // Easier than dealing with hardcoded properties of `FindAGameButton`.
     PlayButton
     {
-      {EXPAND SideBarButton}
+      {EXPAND MenuBarButton}
 
       xPos rs1
       yPos 0
@@ -71,9 +73,9 @@
 
     ToggleChatButton
     {
-      {EXPAND SideBarButton}
+      {EXPAND MenuBarButton}
 
-      xPos "r$(ExpandableList.Width)"
+      xPos "r$(ExpandableList.width)"
       yPos 0
       wide o1
       tall f0
@@ -118,11 +120,11 @@
       tall f0
       proportionalToParent 0
 
-      bgColor_override _9ui.SideBar.BG
+      bgColor_override _9ui.MenuBar.BG
 
       mouseInputEnabled 0
 
-      {EXPAND Pin ToggleChatButton $(PIN_TOPLEFT) $(PIN_TOPLEFT)}
+      {EXPAND Pin ToggleChatButton "$(PIN_TOPLEFT)" "$(PIN_TOPLEFT)"}
     }
 
     // Close `ExpandableList` when clicking anywhere else.

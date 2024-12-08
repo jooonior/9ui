@@ -1,7 +1,7 @@
 // MISC
 
 {DEFINE Hide key} {
-  $(key)
+  "$(key)"
   {
     xPos r0
     yPos r0
@@ -24,57 +24,57 @@
 // PINS
 
 {DEFINE Pin anchor corner sibling_corner} {
-  pin_to_sibling $(anchor)
-  pin_corner_to_sibling $(corner)
-  pin_to_sibling_corner $(sibling_corner)
+  pin_to_sibling "$(anchor)"
+  pin_corner_to_sibling "$(corner)"
+  pin_to_sibling_corner "$(sibling_corner)"
 }
 
 {DEFINE PinAbove anchor} {
-  pin_to_sibling $(anchor)
-  pin_corner_to_sibling $(PIN_CENTER_BOTTOM)
-  pin_to_sibling_corner $(PIN_CENTER_TOP)
+  pin_to_sibling "$(anchor)"
+  pin_corner_to_sibling "$(PIN_CENTER_BOTTOM)"
+  pin_to_sibling_corner "$(PIN_CENTER_TOP)"
 }
 
 {DEFINE PinBelow anchor} {
-  pin_to_sibling $(anchor)
-  pin_corner_to_sibling $(PIN_CENTER_TOP)
-  pin_to_sibling_corner $(PIN_CENTER_BOTTOM)
+  pin_to_sibling "$(anchor)"
+  pin_corner_to_sibling "$(PIN_CENTER_TOP)"
+  pin_to_sibling_corner "$(PIN_CENTER_BOTTOM)"
 }
 
 {DEFINE PinLeftTo anchor} {
-  pin_to_sibling $(anchor)
-  pin_corner_to_sibling $(PIN_CENTER_RIGHT)
-  pin_to_sibling_corner $(PIN_CENTER_LEFT)
+  pin_to_sibling "$(anchor)"
+  pin_corner_to_sibling "$(PIN_CENTER_RIGHT)"
+  pin_to_sibling_corner "$(PIN_CENTER_LEFT)"
 }
 
 {DEFINE PinRightTo anchor} {
-  pin_to_sibling $(anchor)
-  pin_corner_to_sibling $(PIN_CENTER_LEFT)
-  pin_to_sibling_corner $(PIN_CENTER_RIGHT)
+  pin_to_sibling "$(anchor)"
+  pin_corner_to_sibling "$(PIN_CENTER_LEFT)"
+  pin_to_sibling_corner "$(PIN_CENTER_RIGHT)"
 }
 
 {DEFINE PinOverTopOf anchor} {
-  pin_to_sibling $(anchor)
-  pin_corner_to_sibling $(PIN_CENTER_TOP)
-  pin_to_sibling_corner $(PIN_CENTER_TOP)
+  pin_to_sibling "$(anchor)"
+  pin_corner_to_sibling "$(PIN_CENTER_TOP)"
+  pin_to_sibling_corner "$(PIN_CENTER_TOP)"
 }
 
 {DEFINE PinOverBottomOf anchor} {
-  pin_to_sibling $(anchor)
-  pin_corner_to_sibling $(PIN_CENTER_BOTTOM)
-  pin_to_sibling_corner $(PIN_CENTER_BOTTOM)
+  pin_to_sibling "$(anchor)"
+  pin_corner_to_sibling "$(PIN_CENTER_BOTTOM)"
+  pin_to_sibling_corner "$(PIN_CENTER_BOTTOM)"
 }
 
 {DEFINE PinOverLeftOf anchor} {
-  pin_to_sibling $(anchor)
-  pin_corner_to_sibling $(PIN_CENTER_LEFT)
-  pin_to_sibling_corner $(PIN_CENTER_LEFT)
+  pin_to_sibling "$(anchor)"
+  pin_corner_to_sibling "$(PIN_CENTER_LEFT)"
+  pin_to_sibling_corner "$(PIN_CENTER_LEFT)"
 }
 
 {DEFINE PinOverRightOf anchor} {
-  pin_to_sibling $(anchor)
-  pin_corner_to_sibling $(PIN_CENTER_RIGHT)
-  pin_to_sibling_corner $(PIN_CENTER_RIGHT)
+  pin_to_sibling "$(anchor)"
+  pin_corner_to_sibling "$(PIN_CENTER_RIGHT)"
+  pin_to_sibling_corner "$(PIN_CENTER_RIGHT)"
 }
 
 // BUTTONS
@@ -109,17 +109,16 @@
   depressedFgColor_override _9ui.FlatButton.BG.Hover
 }
 
-{DEFINE SideBarButton} {
+{DEFINE MenuBarButton} {
   {EXPAND BaseButton}
 
   xPos 0
   yPos 0
-  zPos $(zPos.MainMenu)
 
-  wide $(Menu.SideBar.Width)
+  wide "$(MenuBar.size)"
   tall o1
 
-  defaultFgColor_override "_9ui.Button.Normal.FG"
-  armedFgColor_override "_9ui.Button.Hover.FG"
-  depressedFgColor_override "_9ui.Button.Hover.FG"
+  defaultFgColor_override _9ui.Button.Normal.FG
+  armedFgColor_override _9ui.Button.Hover.FG
+  depressedFgColor_override _9ui.Button.Hover.FG
 }

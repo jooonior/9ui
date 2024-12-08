@@ -1,11 +1,12 @@
-{DEFINE Menu.SideBar.Width} 42
+{DEFINE MenuBar.size} 42
 
 // Size of casual/comp/mvm playlist entries.
-{DEFINE PlaylistEntry.Width} 88
-{DEFINE PlaylistEntry.Height} 32
+{DEFINE PlaylistEntry.width} 88
+{DEFINE PlaylistEntry.height} 32
 // How many playlist entries there are.
-{DEFINE PlaylistEntry.Count} 3
+{DEFINE PlaylistEntry.count} 3
+
 // How much `ExpandableList` extends off-screen.
-{DEFINE ExpandableList.Overflow} 10000
+{DEFINE ExpandableList.overflow} 10000
 // How much of `ExpandableList` is visible (when it is open).
-{DEFINE ExpandableList.Width} "$(PlaylistEntry.Width * PlaylistEntry.Count + 12)"
+{DEFINE ExpandableList.width} "$(PlaylistEntry.width * PlaylistEntry.count + 12)"

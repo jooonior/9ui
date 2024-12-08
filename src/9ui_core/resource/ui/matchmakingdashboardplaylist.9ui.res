@@ -15,17 +15,17 @@
   {
     xPos r0  // hardcoded to transition between `r0` and `rs1`
     yPos 0
-    zPos "$(zPos.ExpandableList)"
-    tall "$(PlaylistEntry.Height)"
-    // Much wider than the screen to exploit the xPos transition for sliding a
+    zPos "$(zPos.MMSidePanel)"
+    tall "$(PlaylistEntry.height)"
+    // Much wider than the screen to exploit our xPos transition for sliding a
     // gradient across the screen, creating a fade effect. The gradient lies
     // inside `ExplanationManager`, which is pinned to us (for z-order reasons).
-    wide "f-$(ExpandableList.Overflow + ExpandableList.Width)"
+    wide "f-$(ExpandableList.overflow + ExpandableList.width)"
     proportionalToParent 0
 
     // Offset xPos so that only the left-most part slides on-screen.
     // `MMDashboard` dimensions are set specifically for this purpose.
-    {EXPAND Pin MMDashboard $(PIN_TOPLEFT) $(PIN_BOTTOMRIGHT)}
+    {EXPAND Pin MMDashboard "$(PIN_TOPLEFT)" "$(PIN_BOTTOMRIGHT)"}
     // Pin is not updated after a VGUI reload, which means that the anchor must
     // not be invalidated by said reload (as `MainMenuOverride.res` panels are).
   }
@@ -40,7 +40,7 @@
     xPos 0
     yPos 0
     zPos 0
-    wide "$(PlaylistEntry.Width * PlaylistEntry.Count)"
+    wide "$(PlaylistEntry.width * PlaylistEntry.count)"
     tall f0
     proportionalToParent 1
 
@@ -75,7 +75,7 @@
     {EXPAND FlatButton}
 
     tall f0
-    wide "$(ExpandableList.Width - ../playlist/wide)"
+    wide "$(ExpandableList.width - ../playlist/wide)"
     proportionalToParent 1
 
     {EXPAND PinRightTo playlist}
