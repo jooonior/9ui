@@ -27,6 +27,26 @@
     FriendsContainer
   }
 
+  {DELETE
+    CharacterSetupButton
+    GeneralStoreButton
+    StoreHasNewItemsImage
+
+    SettingsButton
+    NewUserForumsButton
+    TF2SettingsButton
+    AchievementsButton
+    ReportBugButton
+    WorkshopButton
+    CommentaryButton
+    ReplayButton
+    CoachPlayersButton
+
+    QuestLogButton
+    WatchStreamButton
+    MOTD_ShowButtonPanel
+  }
+
   // The actual `DashboardDimmer` panel gets created from code long after
   // `MainMenuOverride` and does not use keys defined here. But after a VGUI
   // reload, these keys are applied to the hardcoded `DashboardDimmer` panel.

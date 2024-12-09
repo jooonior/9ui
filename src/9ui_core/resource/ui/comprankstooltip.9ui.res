@@ -84,6 +84,84 @@
     {EXPAND PinBelow Backpack}
   }
 
+  {DEFINE SmallMainMenuButton} {
+    {EXPAND MainMenuButton}
+
+    wide p0.5
+  }
+
+  Options
+  {
+    {EXPAND SmallMainMenuButton}
+
+    font 9ui.icons.14
+    labelText "$(ICON_GEAR)"
+
+    command "OpenOptionsDialog"
+
+    {EXPAND Pin Store "$(PIN_TOPLEFT)" "$(PIN_BOTTOMLEFT)"}
+  }
+
+  AdvancedOptions
+  {
+    {EXPAND SmallMainMenuButton}
+
+    font 9ui.icons.18
+    labelText "$(ICON_GEARS)"
+
+    command "OpenTF2Options"
+
+    {EXPAND Pin Store "$(PIN_TOPRIGHT)" "$(PIN_BOTTOMRIGHT)"}
+  }
+
+  Replays
+  {
+    {EXPAND SmallMainMenuButton}
+
+    font 9ui.icons.14
+    labelText "$(ICON_FILM)"
+
+    command "engine replay_reloadbrowser"
+
+    {EXPAND PinBelow Options}
+  }
+
+  Workshop
+  {
+    {EXPAND SmallMainMenuButton}
+
+    font 9ui.icons.15
+    labelText "$(ICON_WRENCH)"
+
+    command "engine OpenSteamWorkshopDialog"
+
+    {EXPAND PinBelow AdvancedOptions}
+  }
+
+  Contracker
+  {
+    {EXPAND SmallMainMenuButton}
+
+    font 9ui.icons.15
+    labelText "$(ICON_CONTRACKER)"
+
+    command "questlog"
+
+    {EXPAND PinBelow Replays}
+  }
+
+  Achievements
+  {
+    {EXPAND SmallMainMenuButton}
+
+    font 9ui.icons.16
+    labelText "$(ICON_MEDAL)"
+
+    command "OpenAchievementsDialog"
+
+    {EXPAND PinBelow Workshop}
+  }
+
   Quit
   {
     {EXPAND MainMenuButton}
