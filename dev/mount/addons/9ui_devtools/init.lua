@@ -59,7 +59,7 @@ function Plugin:Load(interface_factory)
 
     if ifc.panel ~= nil and ifc.surface ~= nil then
 
-      local command = engine.ConCommand {
+      local vpanel_dump_settings = engine.ConCommand {
         name = "vpanel_dump_settings",
         description = "Print VGUI panel settings to console.",
         callback = function(args)
@@ -81,9 +81,38 @@ function Plugin:Load(interface_factory)
           end
         end,
       }
-      if command ~= nil then
-        ifc.cvar:RegisterConCommand(command)
-        table.insert(self.commands, command)
+      if vpanel_dump_settings ~= nil then
+        ifc.cvar:RegisterConCommand(vpanel_dump_settings)
+        table.insert(self.commands, vpanel_dump_settings)
+      end
+
+      local vpanel_get_parent = engine.ConCommand {
+        name = "vpanel_get_parent",
+        description = "Get the parent of a VGUI panel.",
+        callback = function(args)
+          if args:ArgC() < 2 then
+            warn("usage: vpanel_get_parent <panel name> ...")
+            return
+          end
+
+          local names = {}
+          for i = 1, args:ArgC() - 1 do
+            table.insert(names, args:Arg(i))
+          end
+
+          local panel = plugin.vpanel.find_panel(unpack(names))
+          if panel == nil then
+            print("panel not found")
+          else
+            local parent = ifc.panel:GetParent(panel)
+            local name = ifc.panel:GetName(parent)
+            print(ffi.string(name))
+          end
+        end,
+      }
+      if vpanel_get_parent ~= nil then
+        ifc.cvar:RegisterConCommand(vpanel_get_parent)
+        table.insert(self.commands, vpanel_get_parent)
       end
 
     end

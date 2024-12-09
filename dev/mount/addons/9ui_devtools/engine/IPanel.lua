@@ -23,6 +23,9 @@ return class {
     [18] = [[
       VPANEL GetChild(VPANEL vguiPanel, int index)
     ]],
+    [20] = [[
+      VPANEL GetParent(VPANEL vguiPanel)
+    ]],
     [36] = [[
       const char *GetName(VPANEL vguiPanel)
     ]],
