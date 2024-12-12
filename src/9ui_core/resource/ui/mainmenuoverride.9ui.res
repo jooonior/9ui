@@ -45,6 +45,12 @@
     QuestLogButton
     WatchStreamButton
     MOTD_ShowButtonPanel
+
+    VRModeButton
+    CallVoteButton
+    MutePlayersButton
+    RequestCoachButton
+    ReportPlayerButton
   }
 
   // The actual `DashboardDimmer` panel gets created from code long after
