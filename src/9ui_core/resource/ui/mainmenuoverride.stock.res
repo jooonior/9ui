@@ -1711,132 +1711,87 @@
 				{
 					"0"
 					{
-						"item"		"Summer 2024 Cosmetic Key"
+						"item"		"Winter 2024 Cosmetic Key" 
 						"show_market"	"0"
 					}
 					"1"
 					{
-						"item"		"Summer 2024 Cosmetic Case"
+						"item"		"Winter 2024 Cosmetic Case"
 						"show_market"	"1"
 					}
 					"2"
 					{
-						"item"		"Taunt: Can It!"
+						"item"		"Taunt: Curtain Call"
 						"show_market"	"0"
 					}
 					"3"
 					{
-						"item"		"Taunt: Cremator's Condolences"
+						"item"		"Taunt: Peace!"
 						"show_market"	"0"
 					}
 					"4"
 					{
-						"item"		"Taunt: Straight Shooter Tutor"
+						"item"		"Taunt: Fore-Head Slice"
 						"show_market"	"0"
 					}
 					"5"
 					{
-						"item"		"Taunt: Unleashed Rage"
+						"item"		"Map Token Overcast"
 						"show_market"	"0"
 					}
 					"6"
 					{
-						"item"		"Map Token Embargo"
+						"item"		"Map Token Fortezza"
 						"show_market"	"0"
 					}
 					"7"
 					{
-						"item"		"Map Token Odyssey"	
+						"item"		"Map Token Penguin Peak"
 						"show_market"	"0"
 					}
 					"8"
 					{
-						"item"		"Map Token Megaton"
+						"item"		"Map Token Patagonia"
 						"show_market"	"0"
 					}
 					"9"
 					{
-						"item"		"Map Token Cachoeira"
+						"item"		"Map Token Cutter"
 						"show_market"	"0"
 					}
 					"10"
 					{
-						"item"		"Map Token Overgrown"
+						"item"		"Map Token Maul"
 						"show_market"	"0"
 					}
 					"11"
 					{
-						"item"		"Map Token Hadal"
+						"item"		"Strange Filter: Overcast (Community)"
 						"show_market"	"0"
 					}
 					"12"
 					{
-						"item"		"Map Token Applejack"
+						"item"		"Strange Filter: Fortezza (Community)"
 						"show_market"	"0"
 					}
 					"13"
 					{
-						"item"		"Map Token Atom Smash"
+						"item"		"Strange Filter: Penguin Peak (Community)"
 						"show_market"	"0"
 					}
 					"14"
 					{
-						"item"		"Map Token Canaveral"
+						"item"		"Strange Filter: Patagonia (Community)"
 						"show_market"	"0"
 					}
 					"15"
 					{
-						"item"		"Map Token Burghausen"
+						"item"		"Strange Filter: Cutter (Community)"
 						"show_market"	"0"
 					}
 					"16"
 					{
-						"item"		"Strange Filter: Embargo (Community)"
-						"show_market"	"0"
-					}
-					"17"
-					{
-						"item"		"Strange Filter: Odyssey (Community)"
-						"show_market"	"0"
-					}
-					"18"
-					{
-						"item"		"Strange Filter: Megaton (Community)"
-						"show_market"	"0"
-					}
-					"19"
-					{
-						"item"		"Strange Filter: Cachoeira (Community)"
-						"show_market"	"0"
-					}
-					"20"
-					{
-						"item"		"Strange Filter: Overgrown (Community)"
-						"show_market"	"0"
-					}
-					"21"
-					{
-						"item"		"Strange Filter: Hadal (Community)"
-						"show_market"	"0"
-					}
-					"22"
-					{
-						"item"		"Strange Filter: Applejack (Community)"
-						"show_market"	"0"
-					}
-					"23"
-					{
-						"item"		"Strange Filter: Atom Smash (Community)"
-						"show_market"	"0"
-					}
-					"24"
-					{
-						"item"		"Strange Filter: Canaveral (Community)"
-						"show_market"	"0"
-					}
-					"25"
-					{
-						"item"		"Strange Filter: Burghausen (Community)"
+						"item"		"Strange Filter: Maul (Community)"
 						"show_market"	"0"
 					}
 				}
@@ -2284,7 +2239,7 @@
 			"default"		"1"
 			"sound_depressed"	"UI/buttonclick.wav"
 			"sound_released"	"UI/buttonclickrelease.wav"
-			
+			"RoundedCorners"	"10"
 			
 			"paintbackground"	"1"
 			
