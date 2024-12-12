@@ -122,3 +122,28 @@
   armedFgColor_override _9ui.Button.Hover.FG
   depressedFgColor_override _9ui.Button.Hover.FG
 }
+
+{DEFINE MenuBarBG} {
+  controlName EditablePanel
+
+  zPos -1
+
+  mouseInputEnabled 0
+  keyboardInputEnabled 0
+
+  Image
+  {
+    controlName Panel
+
+    xPos cs-0.5
+    yPos cs-0.5
+    wide "f$(MenuBar.inset)"
+    tall "f$(MenuBar.inset)"
+    proportionalToParent 1
+
+    paintBackgroundType 2  // needed for `roundedCorners`
+    roundedCorners "$(ROUND_CORNER_ALL)"
+
+    bgColor_override _9ui.MenuBar.BG
+  }
+}

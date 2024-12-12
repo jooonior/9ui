@@ -1,4 +1,5 @@
 {DEFINE MenuBar.size} 42
+{DEFINE MenuBar.inset} 4
 
 // Size of casual/comp/mvm playlist entries.
 {DEFINE PlaylistEntry.width} 88

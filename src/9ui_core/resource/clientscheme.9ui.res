@@ -4,7 +4,7 @@ Scheme
   {
     // Color names must not start with a digit (or a dot).
 
-    _9ui.MenuBar.BG "93 93 93 255"
+    _9ui.MenuBar.BG "70 70 70 210"
 
     _9ui.FlatButton.BG.Default "93 93 93 184"
     _9ui.FlatButton.BG.Hover "112 112 112 202"

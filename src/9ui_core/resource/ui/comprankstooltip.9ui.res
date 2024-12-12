@@ -28,16 +28,11 @@
 
   Background
   {
-    controlName Panel
+    {EXPAND MenuBarBG}
 
-    zPos -1
     wide f0
     tall f0
     proportionalToParent 1
-
-    bgColor_override _9ui.MenuBar.BG
-
-    mouseInputEnabled 0
   }
 
   {DEFINE MainMenuButton} {
