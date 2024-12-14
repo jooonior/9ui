@@ -20,3 +20,7 @@ exec 9ui/no_explanations
 // in `ExplanationManager` being initialized right after `ExpandableList`, and
 // allows pinning the former to the latter.
 tf_training_has_prompted_for_training 0
+
+// Prevent "unknown command" console messages when closing `character_info` or
+// `store_panel`. See code of `CCharacterInfoPanel/CStorePanel::OnCommand`.
+alias close

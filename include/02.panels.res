@@ -21,6 +21,36 @@
   proportionalToParent 1
 }
 
+{DEFINE Anchor} {
+  controlName Panel
+  wide 0
+  tall 0
+  mouseInputEnabled 0
+  keyboardInputEnabled 0
+}
+
+// Hide hardcoded children of `Frame`.
+{DEFINE HideFrameChildren} {
+  {FOR child IN
+    topGrip
+    bottomGrip
+    leftGrip
+    rightGrip
+    tlGrip
+    trGrip
+    blGrip
+    brGrip
+    caption
+    minimize
+    maximize
+    mintosystray
+    close
+    menu
+  } {
+    "frame_$(child)" { visible 0 }
+  }
+}
+
 // PINS
 
 {DEFINE Pin anchor corner sibling_corner} {

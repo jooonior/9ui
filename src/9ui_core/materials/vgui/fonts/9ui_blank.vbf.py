@@ -103,7 +103,7 @@ def main():
         page_width=width,
         page_height=height,
         max_char_width=0,
-        max_char_height=0,
+        max_char_height=1,
         flags=BitmapFlag.CUSTOM,
         accent=0,
         num_glyphs=0,

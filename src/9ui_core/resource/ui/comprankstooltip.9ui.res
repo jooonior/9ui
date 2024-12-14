@@ -10,6 +10,9 @@
 // parent: MainMenuOverride => ./MainMenuOverride.res
 
 
+// Sidebar buttons that are also used in other places.
+#base "SideBarButtons.res"
+
 "Resource/UI/MatchMakingTooltip.res"
 {
   {CLEAR}  // delete everything
@@ -36,21 +39,14 @@
   }
 
   {DEFINE MainMenuButton} {
-    {EXPAND MenuBarButton}
-
-    wide f0
-    tall o1
-    proportionalToParent 1
-
     actionSignalLevel 2  // set `MainMenuOverride` as our signal target
   }
+
+  // Buttons from `#base SideBarButtons.res` ...
 
   Servers
   {
     {EXPAND MainMenuButton}
-
-    font 9ui.icons.26
-    labelText "$(ICON_GLOBE)"
 
     command "OpenServerBrowser"
   }
@@ -58,9 +54,6 @@
   Backpack
   {
     {EXPAND MainMenuButton}
-
-    font 9ui.icons.20
-    labelText "$(ICON_SUITCASE)"
 
     command "engine open_charinfo_backpack"
 
@@ -71,18 +64,20 @@
   {
     {EXPAND MainMenuButton}
 
-    font 9ui.icons.22
-    labelText "$(ICON_BASKET)"
-
     command "engine open_store"
 
     {EXPAND PinBelow Backpack}
   }
 
+  // Other buttons ...
+
   {DEFINE SmallMainMenuButton} {
+    {EXPAND MenuBarButton}
     {EXPAND MainMenuButton}
 
     wide p0.5
+    tall o1
+    proportionalToParent 1
   }
 
   Options
@@ -159,6 +154,7 @@
 
   Quit
   {
+    {EXPAND MenuBarButton}
     {EXPAND MainMenuButton}
 
     yPos rs1
