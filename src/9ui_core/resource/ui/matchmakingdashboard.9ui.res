@@ -235,6 +235,9 @@
 
       font 9ui.icons.20
       labelText "$(ICON_CHAT)"
+
+      // After a VGUI reload, this color is used initially.
+      fgColor "$(./defaultFgColor_override)"
     }
 
     {FOR n BETWEEN 1 5} {
